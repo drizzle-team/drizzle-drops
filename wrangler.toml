@@ -1,0 +1,21 @@
+name = "proxy-worker"
+type = "javascript"
+workers_dev = true
+compatibility_date = "2022-03-11"
+account_id = "8a696eff443b561a437394e59dfedeff" 
+
+[[d1_databases]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "proxy-db"
+database_id = "cd5eac68-fb6a-46b9-ae47-feab69e77ab5"
+
+
+[build]
+command = "yarn install --freeze-lockfile && yarn build"
+[build.upload]
+format = "modules"
+dir = "./dist"
+main = "./worker.js"
+[[build.upload.rules]]
+type = "ESModule"
+globs = ["**/*.js"]

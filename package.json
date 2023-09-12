@@ -1,0 +1,25 @@
+{
+  "name": "proxy-driver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "esbuild --bundle --sourcemap --outdir=dist --format=esm ./worker.ts"
+  },
+  "dependencies": {
+    "@types/better-sqlite3": "^7.6.4",
+    "axios": "^1.4.0",
+    "better-sqlite3": "^8.5.2",
+    "drizzle-kit": "^0.19.13",
+    "drizzle-orm": "^0.28.5",
+    "esbuild": "^0.19.2",
+    "fastify": "^4.21.0",
+    "superjson": "^1.13.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230821.0",
+    "@types/node": "^20.5.6",
+    "bun-types": "^0.8.1",
+    "typescript": "^5.2.2"
+  }
+}
